@@ -15,8 +15,6 @@ stocks = tickets.history(period = period, interval = interval)
 if len(stocks) > 0:
 
     fig = go.Figure()
-
-    if stocks.
     fig.add_trace(go.Candlestick(x=stocks.index, open = stocks.Open, high=stocks.High, low=stocks.Low, close=stocks.Close, name = 'market data'))
     fig.update_layout(title = f'Stocks para {cia}', yaxis_title = 'Valor', width=1000, height=700)
     st.plotly_chart(fig)
